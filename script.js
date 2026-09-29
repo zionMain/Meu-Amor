@@ -20,8 +20,7 @@ setInterval(actualizarReloj, 1000);
 actualizarReloj();
 
 
-
-
+// MÚSICA
 
 const reina = new Audio("music/reina.mp3");
 const inarow = new Audio("music/inarow.mp3");
@@ -57,7 +56,6 @@ function reproducir(cancion) {
     cancion.play();
 }
 
-
 document.getElementById("reina").addEventListener("click", function() {
     reproducir(reina);
 });
@@ -73,3 +71,39 @@ document.getElementById("gongoli").addEventListener("click", function() {
 document.getElementById("ncdbs").addEventListener("click", function() {
     reproducir(ncdbs);
 });
+
+
+// CARRUSEL
+
+const imagen = document.getElementById("imagenCarrusel");
+
+const imagenes = [
+    "img/1.jpg",
+    "img/2.jpg",
+    "img/3.jpg",
+    "img/4.jpg",
+    "img/5.jpg",
+    "img/6.jpg",
+    "img/7.jpg"
+];
+
+let indice = 0;
+
+// Coloca la primera imagen
+imagen.src = imagenes[indice];
+
+function cambiarImagen() {
+    imagen.style.opacity = 0;
+
+    setTimeout(function() {
+        indice++;
+
+        if (indice >= imagenes.length) {
+            indice = 0;
+        }
+
+        imagen.src = imagenes[indice];
+        imagen.style.opacity = 1;
+    }, 500);
+}
+setInterval(cambiarImagen, 5000);
