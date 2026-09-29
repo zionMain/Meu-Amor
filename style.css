@@ -1,6 +1,3 @@
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
@@ -319,8 +316,11 @@ flex-direction: column;
     text-align: center;
     display: flex;
     align-items: center;
-    align-content: center;
+    
      animation: flotar 3s ease-in-out infinite;
+}
+.sla {
+    width: 50px;
 }
 @keyframes flotar {
     0% {
@@ -338,3 +338,40 @@ flex-direction: column;
 
 
 
+
+
+
+
+.boxcar{
+    width: 420px;
+    height: 370px;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+
+}
+.carrusel {
+    width: 400px;
+    height: 350px;
+    overflow: hidden;
+    margin: auto;
+    
+
+}
+
+.carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#imagenCarrusel {
+    opacity: 1;
+    transition: opacity 0.8s ease;
+}
